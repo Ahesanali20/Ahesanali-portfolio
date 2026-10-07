@@ -3,11 +3,28 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-
+import { submitContactForm } from "../../services/contactApi";
 import { contactSchema } from "../../schemas/contactSchema";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  {
+    submitted && (
+      <div className="mb-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-600">
+        Thanks! Your message has been sent successfully.
+      </div>
+    );
+  }
+
+  {
+    submitError && (
+      <div className="mb-6 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-500">
+        {submitError}
+      </div>
+    );
+  }
 
   const {
     register,
@@ -25,14 +42,19 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data) => {
-    console.log("Form data:", data);
+    try {
+      setSubmitted(false);
+      setSubmitError("");
 
-    await new Promise((resolve) => {
-      setTimeout(resolve, 1000);
-    });
+      await submitContactForm(data);
 
-    setSubmitted(true);
-    reset();
+      setSubmitted(true);
+      reset();
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+
+      setSubmitError("Something went wrong. Please try again later.");
+    }
   };
 
   return (
