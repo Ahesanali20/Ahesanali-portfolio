@@ -1,7 +1,8 @@
-import AboutPreview from "./sections/AboutPreview";
-import FeaturedProjects from "./sections/FeaturedProjects";
 import Hero from "./sections/Hero";
+import AboutPreview from "./sections/AboutPreview";
 import SkillsPreview from "./sections/SkillsPreview";
+import FeaturedProjects from "./sections/FeaturedProjects";
+import GithubRepos from "./sections/GithubRepos";
 
 const Home = () => {
   return (
@@ -10,9 +11,7 @@ const Home = () => {
       <AboutPreview />
       <SkillsPreview />
       <FeaturedProjects />
-
-      {/* Future sections */}
-      {/* ContactCTA */}
+      <GithubRepos />
     </>
   );
 };
