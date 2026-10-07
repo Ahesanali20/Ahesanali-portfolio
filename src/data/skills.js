@@ -1,23 +1,22 @@
-// TODO: Add portfolio skills data.
 export const skills = [
   {
-    category: "Frontend",
-    skills: ["HTML", "CSS", "JavaScript", "React", "React Router"],
+    category: "Programming Languages",
+    skills: ["HTML", "CSS", "JavaScript"],
   },
   {
-    category: "State & Data",
-    skills: ["Redux Toolkit", "TanStack Query", "Axios"],
+    category: "Frameworks & Libraries",
+    skills: ["React", "Tailwind CSS", "Bootstrap"],
   },
   {
-    category: "UI & Styling",
-    skills: ["Tailwind CSS", "shadcn/ui", "Base UI", "Lucide React"],
+    category: "Databases",
+    skills: ["MySQL"],
   },
   {
-    category: "Forms & Validation",
-    skills: ["React Hook Form", "Zod"],
+    category: "Tools & Platforms",
+    skills: ["VS Code", "Git", "GitHub", "Groq API"],
   },
   {
-    category: "Tools",
-    skills: ["Git", "GitHub", "Vite", "ESLint", "Prettier"],
+    category: "Familiar With",
+    skills: ["Python", "PHP", "ASP.NET"],
   },
 ];
