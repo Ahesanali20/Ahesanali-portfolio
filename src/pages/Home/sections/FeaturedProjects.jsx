@@ -63,6 +63,7 @@ const FeaturedProjects = () => {
                 duration: 0.5,
                 delay: index * 0.1,
               }}
+              className="h-full"
             >
               <ProjectCard project={project} />
             </motion.div>

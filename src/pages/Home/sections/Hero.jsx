@@ -1,6 +1,11 @@
 // TODO: Implement the hero section.
 import { motion } from "motion/react";
-import { ArrowDown, ArrowUpRight, Mail, Sparkles } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Mail,
+  Sparkles,
+} from "lucide-react/dist/cjs/lucide-react";
 import { Link } from "react-router-dom";
 import { GithubIcon } from "@/components/ui/github";
 import { LinkedinIcon } from "@/components/ui/linkedin";

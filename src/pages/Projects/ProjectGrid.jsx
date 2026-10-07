@@ -29,6 +29,7 @@ const ProjectGrid = ({ projects }) => {
             duration: 0.4,
             delay: index * 0.06,
           }}
+          className="h-full"
         >
           <ProjectCard project={project} />
         </motion.div>

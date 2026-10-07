@@ -1,4 +1,4 @@
-import { ArrowUpRight, ExternalLink } from "lucide-react/dist/cjs/lucide-react";
+import { ArrowUpRight } from "lucide-react/dist/cjs/lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { GithubIcon } from "../ui/github";
@@ -8,9 +8,8 @@ const ProjectCard = ({ project }) => {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25 }}
-      className="group overflow-hidden rounded-3xl border border-(--color-border) bg-(--color-surface) shadow-(--color-accent-shadow) shadow-lg"
+      className="group flex h-full flex-col overflow-hidden rounded-3xl border border-(--color-border) bg-(--color-surface) shadow-(--color-accent-shadow) shadow-lg"
     >
-      {/* Project Image */}
       <div className="relative aspect-video overflow-hidden bg-(--color-accent-soft)">
         <img
           src={project.image}
@@ -21,8 +20,7 @@ const ProjectCard = ({ project }) => {
         <div className="absolute inset-0 bg-black/0 opacity-80 transition duration-300 group-hover:bg-black/10" />
       </div>
 
-      {/* Content */}
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <span className="text-xs font-semibold tracking-wider text-(--color-accent) uppercase">
@@ -47,7 +45,6 @@ const ProjectCard = ({ project }) => {
           {project.description}
         </p>
 
-        {/* Technologies */}
         <div className="mt-5 flex flex-wrap gap-2">
           {project.technologies.slice(0, 4).map((technology) => (
             <span
@@ -59,27 +56,29 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
 
-        {/* Links */}
-        <div className="mt-6 flex items-center gap-3 border-t border-(--color-border) pt-5">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-accent)"
-          >
-            <GithubIcon size={17} />
-            Code
-          </a>
+        <div className="mt-auto pt-6">
+          <div className="flex items-center gap-3 border-t border-(--color-border) pt-5">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-accent)"
+            >
+              <GithubIcon size={17} />
+              Code
+            </a>
 
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-accent)"
-          >
-            <ExternalLink size={17} />
-            Live Demo
-          </a>
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-accent)"
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.article>
