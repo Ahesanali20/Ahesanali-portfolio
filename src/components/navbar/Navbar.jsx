@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { GithubIcon } from "../ui/github";
 import { LinkedinIcon } from "../ui/linkedin";
+import ThemeToggle from "../common/ThemeToggle";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -45,7 +46,9 @@ const Navbar = () => {
             <p className="text-sm font-semibold tracking-tight text-(--color-text-primary)">
               Ahesanali Kadiwala
             </p>
-            <p className="text-[11px] text-(--color-text-secondary)">React Developer</p>
+            <p className="text-[11px] text-(--color-text-secondary)">
+              React Developer
+            </p>
           </div>
         </NavLink>
 
@@ -83,6 +86,8 @@ const Navbar = () => {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
+          <ThemeToggle />
+
           <a
             href="https://github.com/Ahesanali20"
             target="_blank"
@@ -157,6 +162,7 @@ const Navbar = () => {
             <div className="my-3 h-px bg-(--color-border)" />
 
             <div className="flex items-center gap-2">
+              <ThemeToggle />
               <a
                 href="https://github.com/Ahesanali20"
                 target="_blank"

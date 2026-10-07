@@ -41,3 +41,35 @@ button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #050505;
+  --color-surface: #0d0d0d;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-accent: #60a5fa;
+  --color-accent-hover: #3b82f6;
+  --color-border: #1e293b;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+}
