@@ -1,12 +1,13 @@
+import AboutPreview from "./sections/AboutPreview";
 import Hero from "./sections/Hero";
 
 const Home = () => {
   return (
     <>
       <Hero />
+      <AboutPreview />
 
       {/* Future sections */}
-      {/* AboutPreview */}
       {/* SkillsPreview */}
       {/* FeaturedProjects */}
       {/* ContactCTA */}
