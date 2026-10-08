@@ -43,17 +43,19 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      setSubmitted(false);
       setSubmitError("");
 
       await submitContactForm(data);
 
-      setSubmitted(true);
       reset();
+      setSubmitted(true);
     } catch (error) {
-      console.error("Contact form submission failed:", error);
+      console.error(error);
 
-      setSubmitError("Something went wrong. Please try again later.");
+      setSubmitError(
+        error.response?.data?.message ||
+          "Something went wrong. Please try again later.",
+      );
     }
   };
 
