@@ -22,7 +22,8 @@ app.use(
         return callback(null, true);
       }
 
-      const isLocalhostDevOrigin = /^http:\/\/(localhost|127\.0\.0\.1):517[3-9]$/.test(origin);
+      const isLocalhostDevOrigin =
+        /^http:\/\/(localhost|127\.0\.0\.1):517[3-9]$/.test(origin);
 
       if (isLocalhostDevOrigin) {
         return callback(null, true);
