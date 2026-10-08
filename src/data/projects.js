@@ -44,7 +44,7 @@ export const projects = [
     ],
     image: `${import.meta.env.BASE_URL}images/ecommerce-store-hero-banner.png`,
     github: "https://github.com/Ahesanali20/E-Commerce-Redux-Toolkit.git",
-    live: "",
+    live: "https://celadon-granita-aa2af4.netlify.app/",
     featured: true,
   },
 
