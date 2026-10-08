@@ -1,9 +1,12 @@
-// TODO: Implement the project details page.
 import { motion } from "motion/react";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  ExternalLink,
+} from "lucide-react/dist/cjs/lucide-react";
 import { Link, useParams } from "react-router-dom";
 
 import { projects } from "../../data/projects";
-import { ArrowLeft, ExternalLink } from "lucide-react/dist/cjs/lucide-react";
 import { GithubIcon } from "@/components/ui/github";
 
 const ProjectDetails = () => {
@@ -13,9 +16,13 @@ const ProjectDetails = () => {
 
   if (!project) {
     return (
-      <section className="flex min-h-screen items-center justify-center bg-(--color-background) px-6">
+      <section className="flex min-h-[70vh] items-center justify-center px-4 py-24 sm:px-6">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-(--color-text-primary)">
+          <p className="text-sm font-semibold tracking-[0.2em] text-(--color-accent) uppercase">
+            404
+          </p>
+
+          <h1 className="mt-3 text-3xl font-bold text-(--color-text-primary)">
             Project Not Found
           </h1>
 
@@ -36,120 +43,157 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="min-h-screen bg-(--color-background) px-6 pt-32 pb-24">
-      <div className="mx-auto max-w-5xl">
-        {/* Back */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+    <div className="pt-24">
+      {/* Header */}
+      <section className="px-4 py-16 sm:px-6 lg:py-24">
+        <div className="mx-auto max-w-5xl">
           <Link
             to="/projects"
             className="inline-flex items-center gap-2 text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-accent)"
           >
-            <ArrowLeft size={17} />
+            <ArrowLeft size={16} />
             Back to Projects
           </Link>
-        </motion.div>
 
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mt-10"
-        >
-          <span className="text-sm font-semibold tracking-[0.2em] text-(--color-accent) uppercase">
-            {project.category}
-          </span>
-
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-(--color-text-primary) sm:text-5xl lg:text-6xl">
-            {project.title}
-          </h1>
-
-          <p className="mt-6 max-w-3xl text-base leading-8 text-(--color-text-secondary) sm:text-lg">
-            {project.description}
-          </p>
-        </motion.div>
-
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-12 overflow-hidden rounded-3xl border border-(--color-border) bg-(--color-surface) shadow-(--color-accent-shadow) shadow-xl"
-        >
-          <img
-            src={project.image}
-            alt={project.title}
-            className="aspect-video w-full object-cover"
-          />
-        </motion.div>
-
-        {/* Content */}
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_300px]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className="mt-10"
           >
-            <h2 className="text-2xl font-semibold text-(--color-text-primary)">
-              About this project
-            </h2>
+            <span className="inline-flex rounded-full bg-(--color-accent-soft) px-3 py-1.5 text-xs font-semibold text-(--color-accent)">
+              {project.category}
+            </span>
 
-            <p className="mt-4 leading-8 text-(--color-text-secondary)">
+            <h1 className="mt-5 text-4xl font-bold tracking-tight text-(--color-text-primary) sm:text-5xl lg:text-6xl">
+              {project.title}
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-base leading-8 text-(--color-text-secondary) sm:text-lg">
               {project.description}
             </p>
+
+            {/* Actions */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+                >
+                  <GithubIcon size={17} />
+                  View on GitHub
+                </a>
+              )}
+
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-(--color-border) bg-(--color-surface) px-5 py-3 text-sm font-semibold text-(--color-text-primary) transition hover:-translate-y-0.5 hover:border-(--color-accent) hover:text-(--color-accent)"
+                >
+                  <ExternalLink size={17} />
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Project Preview */}
+      <section className="border-y border-(--color-border) bg-(--color-surface) px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="overflow-hidden rounded-3xl border border-(--color-border) bg-(--color-background) shadow-xl"
+          >
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="aspect-video w-full object-cover"
+              />
+            ) : (
+              <div className="flex aspect-video items-center justify-center text-(--color-text-secondary)">
+                No preview available
+              </div>
+            )}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Project Information */}
+      <section className="px-4 py-20 sm:px-6 lg:py-28">
+        <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[1fr_0.8fr]">
+          {/* Features */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-sm font-semibold tracking-[0.2em] text-(--color-accent) uppercase">
+              Project Features
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-(--color-text-primary)">
+              What I built.
+            </h2>
+
+            <div className="mt-8 space-y-4">
+              {project.features?.map((feature) => (
+                <div
+                  key={feature}
+                  className="flex items-start gap-3 rounded-xl border border-(--color-border) bg-(--color-surface) p-4"
+                >
+                  <CheckCircle2
+                    size={20}
+                    className="mt-0.5 shrink-0 text-(--color-accent)"
+                  />
+
+                  <span className="text-sm leading-6 text-(--color-text-secondary)">
+                    {feature}
+                  </span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Sidebar */}
-          <motion.aside
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="h-fit rounded-3xl border border-(--color-border) bg-(--color-surface) p-6"
+          {/* Technologies */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="font-semibold text-(--color-text-primary)">
+            <p className="text-sm font-semibold tracking-[0.2em] text-(--color-accent) uppercase">
               Technologies
-            </h3>
+            </p>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+            <h2 className="mt-3 text-3xl font-bold text-(--color-text-primary)">
+              Tech stack.
+            </h2>
+
+            <div className="mt-8 flex flex-wrap gap-3">
               {project.technologies.map((technology) => (
                 <span
                   key={technology}
-                  className="rounded-full border border-(--color-border) bg-(--color-background) px-3 py-1.5 text-xs font-medium text-(--color-text-secondary)"
+                  className="rounded-xl border border-(--color-border) bg-(--color-surface) px-4 py-2.5 text-sm font-medium text-(--color-text-secondary) transition hover:border-(--color-accent) hover:text-(--color-accent)"
                 >
                   {technology}
                 </span>
               ))}
             </div>
-
-            <div className="mt-6 flex flex-col gap-3">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-(--color-border) px-4 py-3 text-sm font-semibold text-(--color-text-primary) transition hover:border-(--color-accent) hover:bg-(--color-accent-soft) hover:text-(--color-accent)"
-              >
-                <GithubIcon size={17} />
-                View Source
-              </a>
-
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-(--color-accent) px-4 py-3 text-sm font-semibold text-white transition hover:bg-(--color-accent-hover)"
-              >
-                <ExternalLink size={17} />
-                Live Demo
-              </a>
-            </div>
-          </motion.aside>
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

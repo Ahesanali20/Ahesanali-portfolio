@@ -1,9 +1,9 @@
-// TODO: Implement the featured projects section.
 import { motion } from "motion/react";
+import { ArrowRight, BriefcaseBusiness } from "lucide-react";
 import { Link } from "react-router-dom";
+
 import ProjectCard from "../../../components/common/ProjectCard";
 import { projects } from "../../../data/projects";
-import { ArrowUpRight } from "lucide-react/dist/cjs/lucide-react";
 
 const FeaturedProjects = () => {
   const featuredProjects = projects
@@ -11,64 +11,98 @@ const FeaturedProjects = () => {
     .slice(0, 3);
 
   return (
-    <section className="relative overflow-hidden border-t border-(--color-border) bg-(--color-background) px-6 py-24 sm:py-28">
-      <div className="pointer-events-none absolute top-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-(--color-accent-glow) opacity-10 blur-[120px]" />
-
-      <div className="relative mx-auto max-w-7xl">
+    <section className="px-4 py-20 sm:px-6 lg:py-28">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end"
         >
           <div className="max-w-2xl">
-            <span className="text-sm font-semibold tracking-[0.2em] text-(--color-accent) uppercase">
-              Selected Work
-            </span>
+            <div className="flex items-center gap-2 text-(--color-accent)">
+              <BriefcaseBusiness size={18} />
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-(--color-text-primary) sm:text-4xl lg:text-5xl">
-              Projects I've{" "}
-              <span className="text-(--color-accent)">built.</span>
+              <p className="text-sm font-semibold tracking-[0.2em] uppercase">
+                Selected Work
+              </p>
+            </div>
+
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-(--color-text-primary) sm:text-4xl">
+              Projects I've built.
             </h2>
 
-            <p className="mt-6 text-base leading-8 text-(--color-text-secondary) sm:text-lg">
-              A selection of projects that demonstrate my approach to frontend
-              development, UI design and application architecture.
+            <p className="mt-4 leading-7 text-(--color-text-secondary)">
+              A selection of projects where I've applied React, modern frontend
+              technologies, state management and API integration to solve
+              practical problems.
             </p>
           </div>
 
           <Link
             to="/projects"
-            className="group inline-flex w-fit items-center gap-2 text-sm font-semibold text-(--color-accent)"
+            className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-(--color-accent) transition hover:gap-3"
           >
             View all projects
-            <ArrowUpRight
-              size={17}
-              className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
+            <ArrowRight size={17} />
           </Link>
         </motion.div>
 
         {/* Projects */}
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-              }}
-              className="h-full"
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </div>
+        {featuredProjects.length > 0 ? (
+          <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className="h-full"
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-12 rounded-2xl border border-(--color-border) bg-(--color-surface) p-10 text-center">
+            <p className="text-sm text-(--color-text-secondary)">
+              No featured projects available.
+            </p>
+          </div>
+        )}
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl border border-(--color-border) bg-(--color-surface) p-6 sm:flex-row sm:p-8"
+        >
+          <div>
+            <h3 className="font-semibold text-(--color-text-primary)">
+              Want to explore more?
+            </h3>
+
+            <p className="mt-1 text-sm text-(--color-text-secondary)">
+              Check out all my projects and the technologies behind them.
+            </p>
+          </div>
+
+          <Link
+            to="/projects"
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+          >
+            Explore Projects
+            <ArrowRight size={17} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
