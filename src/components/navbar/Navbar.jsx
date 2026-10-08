@@ -111,7 +111,7 @@ const Navbar = () => {
           <a
             href="/Ahesanali_Kadiwala_Resume.pdf"
             download
-            className="ml-2 inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-4 py-2.5 text-sm font-semibold text-(--color-surface) transition duration-300 hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+            className="ml-2 inline-flex items-center gap-2 rounded-xl bg-(--color-button) px-4 py-2.5 text-sm font-semibold text-(--color-button-text) transition duration-300 hover:-translate-y-0.5 hover:bg-(--color-button-hover)"
           >
             <Download size={16} />
             Download CV
@@ -192,7 +192,7 @@ const Navbar = () => {
               href="/Ahesanali_Kadiwala_Resume.pdf"
               download
               onClick={closeMobileMenu}
-              className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-(--color-accent) px-4 py-3 text-sm font-semibold text-(--color-surface) transition hover:bg-(--color-accent-hover)"
+              className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-(--color-button) px-4 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-button-hover)"
             >
               <Download size={17} />
               Download CV

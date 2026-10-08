@@ -69,7 +69,7 @@ const Hero = () => {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-(--color-accent) px-6 py-3.5 text-sm font-semibold text-white shadow-(--color-accent-shadow) shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-(--color-accent-hover)"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-(--color-button) px-6 py-3.5 text-sm font-semibold text-(--color-button-text) shadow-(--color-accent-shadow) shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-(--color-button-hover)"
             >
               View My Work
               <ArrowRight size={17} />

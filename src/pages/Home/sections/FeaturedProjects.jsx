@@ -97,7 +97,7 @@ const FeaturedProjects = () => {
 
           <Link
             to="/projects"
-            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-(--color-button) px-5 py-3 text-sm font-semibold text-(--color-button-text) transition hover:-translate-y-0.5 hover:bg-(--color-button-hover)"
           >
             Explore Projects
             <ArrowRight size={17} />

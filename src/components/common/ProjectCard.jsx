@@ -80,7 +80,7 @@ const ProjectCard = ({ project }) => {
         <div className="mt-auto flex flex-wrap gap-3 border-t border-(--color-border) pt-5">
           <Link
             to={`/projects/${project.id}`}
-            className="inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-4 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+            className="inline-flex items-center gap-2 rounded-xl bg-(--color-button) px-4 py-2.5 text-sm font-semibold text-(--color-button-text) transition hover:-translate-y-0.5 hover:bg-(--color-button-hover)"
           >
             View Details
             <ArrowUpRight size={16} />

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-:root {
+/* #f8fafc + #2563eb */
+/* :root {
   font-family: "Geist Variable", sans-serif;
   color-scheme: light;
   --color-background: #f8fafc;
@@ -72,4 +73,504 @@ a {
     var(--color-accent) 60%,
     black
   );
+} */
+
+/* =========================================================================================== */
+
+/* #f7f5f0 + #b08d57 */
+/* :root {
+  font-family: "Geist Variable", sans-serif;
+  color-scheme: light;
+  --color-background: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-text-primary: #171717;
+  --color-text-secondary: #6b6b6b;
+  --color-accent: #b08d57;
+  --color-accent-hover: #967546;
+  --color-border: #e5e0d8;
+  --color-button: #1f2933;
+  --color-button-text: #ffffff;
+  --color-button-hover: #303e4b;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, white);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, white);
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    white
+  );
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #0f1110;
+  --color-surface: #181c19;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a7aaa7;
+  --color-accent: #c6a15b;
+  --color-accent-hover: #d5b875;
+  --color-border: #2a302c;
+  --color-button: #c6a15b;
+  --color-button-text: #111111;
+  --color-button-hover: #d5b875;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+} */
+
+/* =========================================================================================== */
+
+/* #F5F4EE + #718B78 */
+/* :root {
+  font-family: "Geist Variable", sans-serif;
+  color-scheme: light;
+  --color-background: #F5F4EE;
+  --color-surface: #FFFEFA;
+  --color-text-primary: #202520;
+  --color-text-secondary: #687269;
+  --color-accent: #718B78;
+  --color-accent-hover: #5F7766;
+  --color-border: #DDE1D8;
+  --color-button: #26352D;
+  --color-button-text: #F5F4EE;
+  --color-button-hover: #1D2922;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, white);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, white);
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    white
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #101713;
+  --color-surface: #19231E;
+  --color-text-primary: #EEF2ED;
+  --color-text-secondary: #AAB8AD;
+  --color-accent: #91A996;
+  --color-accent-hover: #A5B8A9;
+  --color-border: #2B3930;
+  --color-button: #91A996;
+  --color-button-text: #101713;
+  --color-button-hover: #A5B8A9;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+} */
+
+/* =========================================================================================== */
+
+/* #f7f7ff + #7c3aed */
+/* :root {
+  font-family: "Geist Variable", sans-serif;
+  color-scheme: light;
+  --color-background: #f7f7ff;
+  --color-surface: #ffffff;
+  --color-text-primary: #17172a;
+  --color-text-secondary: #66667d;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-border: #e4e2f2;
+  --color-button: #4338ca;
+  --color-button-text: #ffffff;
+  --color-button-hover: #3730a3;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, white);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, white);
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    white
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #0d0b1a;
+  --color-surface: #17142a;
+  --color-text-primary: #f5f3ff;
+  --color-text-secondary: #b8b3ce;
+  --color-accent: #a78bfa;
+  --color-accent-hover: #c4b5fd;
+  --color-border: #302b49;
+  --color-button: #818cf8;
+  --color-button-text: #0d0b1a;
+  --color-button-hover: #a5b4fc;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+} */
+
+/* =========================================================================================== */
+
+/* #faf7f2 + #9b4a5c */
+/* :root {
+  font-family: "Geist Variable", sans-serif;
+  color-scheme: light;
+  --color-background: #faf7f2;
+  --color-surface: #fffefc;
+  --color-text-primary: #272326;
+  --color-text-secondary: #716b6d;
+  --color-accent: #9b4a5c;
+  --color-accent-hover: #81394b;
+  --color-border: #e8dfe0;
+  --color-button: #4a1725;
+  --color-button-text: #ffffff;
+  --color-button-hover: #612333;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, white);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, white);
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    white
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #130d10;
+  --color-surface: #21151a;
+  --color-text-primary: #f5edef;
+  --color-text-secondary: #c2b3b8;
+  --color-accent: #c26a7d;
+  --color-accent-hover: #d17f90;
+  --color-border: #3b2930;
+  --color-button: #c26a7d;
+  --color-button-text: #130d10;
+  --color-button-hover: #d17f90;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+} */
+
+/* =========================================================================================== */
+
+/* #f5f8fc + #159aab */
+/* :root {
+  font-family: "Geist Variable", sans-serif;
+  color-scheme: light;
+  --color-background: #f5f8fc;
+  --color-surface: #ffffff;
+  --color-text-primary: #172033;
+  --color-text-secondary: #5d6b80;
+  --color-accent: #159aab;
+  --color-accent-hover: #117c8a;
+  --color-border: #dce5ef;
+  --color-button: #172b4d;
+  --color-button-text: #ffffff;
+  --color-button-hover: #223b63;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, white);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, white);
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    white
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #0a1220;
+  --color-surface: #111d30;
+  --color-text-primary: #f0f6ff;
+  --color-text-secondary: #aab9cf;
+  --color-accent: #35c2d1;
+  --color-accent-hover: #63d3de;
+  --color-border: #26364d;
+  --color-button: #35c2d1;
+  --color-button-text: #0a1220;
+  --color-button-hover: #63d3de;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+} */
+
+/* =========================================================================================== */
+
+/* #f7f7f5 + #e86a33 */
+:root {
+  font-family: "Geist Variable", sans-serif;
+  color-scheme: light;
+  --color-background: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-text-primary: #242424;
+  --color-text-secondary: #686868;
+  --color-accent: #e86a33;
+  --color-accent-hover: #d85a25;
+  --color-border: #e3e3e1;
+  --color-button: #1a1a1a;
+  --color-button-text: #ffffff;
+  --color-button-hover: #333333;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, white);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, white);
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    white
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #111111;
+  --color-surface: #1c1c1c;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #b8b8b8;
+  --color-accent: #f07a45;
+  --color-accent-hover: #ff8b56;
+  --color-border: #333333;
+  --color-button: #f07a45;
+  --color-button-text: #111111;
+  --color-button-hover: #ff8b56;
+
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 8%, transparent);
+
+  --color-accent-tint: color-mix(in srgb, var(--color-accent) 16%, black);
+
+  --color-accent-glow: color-mix(in srgb, var(--color-accent) 45%, transparent);
+
+  --color-accent-shadow: color-mix(
+    in srgb,
+    var(--color-accent) 20%,
+    transparent
+  );
+
+  --color-accent-wash: color-mix(in srgb, var(--color-accent) 10%, black);
+
+  --color-accent-wash-strong: color-mix(
+    in srgb,
+    var(--color-accent) 60%,
+    black
+  );
+}
+
+/* =========================================================================================== */

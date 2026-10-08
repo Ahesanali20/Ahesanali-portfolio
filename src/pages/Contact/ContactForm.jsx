@@ -10,22 +10,6 @@ const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  {
-    submitted && (
-      <div className="mb-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-600">
-        Thanks! Your message has been sent successfully.
-      </div>
-    );
-  }
-
-  {
-    submitError && (
-      <div className="mb-6 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-500">
-        {submitError}
-      </div>
-    );
-  }
-
   const {
     register,
     handleSubmit,
@@ -49,8 +33,10 @@ const ContactForm = () => {
 
       reset();
       setSubmitted(true);
+      setSubmitError("");
     } catch (error) {
       console.error(error);
+      setSubmitted(false);
 
       setSubmitError(
         error.response?.data?.message ||
@@ -162,7 +148,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-(--color-accent-hover) disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-(--color-button) px-5 py-3.5 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-button-hover) disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Sending..." : "Send Message"}
         {!isSubmitting && <Send size={17} />}

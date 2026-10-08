@@ -80,7 +80,7 @@ const GithubRepos = () => {
               href={siteConfig.socialLinks.github}
               target="_blank"
               rel="noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3 text-sm font-semibold text-white transition hover:bg-(--color-accent-hover)"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl bg-(--color-button) px-5 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-button-hover)"
             >
               Visit GitHub
               <ArrowUpRight size={16} />

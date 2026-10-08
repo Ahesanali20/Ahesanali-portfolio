@@ -7,9 +7,13 @@ import errorHandler from "./middleware/errorHandler.js";
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:5173", process.env.CLIENT_URL].filter(
-  Boolean,
-);
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "http://localhost:5174",
+  "http://127.0.0.1:5174",
+  process.env.CLIENT_URL,
+].filter(Boolean);
 
 app.use(
   cors({
@@ -18,8 +22,15 @@ app.use(
         return callback(null, true);
       }
 
+      const isLocalhostDevOrigin = /^http:\/\/(localhost|127\.0\.0\.1):517[3-9]$/.test(origin);
+
+      if (isLocalhostDevOrigin) {
+        return callback(null, true);
+      }
+
       return callback(new Error("Not allowed by CORS"));
     },
+    credentials: true,
   }),
 );
 

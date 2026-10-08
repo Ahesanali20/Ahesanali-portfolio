@@ -32,7 +32,7 @@ const ProjectDetails = () => {
 
           <Link
             to="/projects"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3 text-sm font-semibold text-white transition hover:bg-(--color-accent-hover)"
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-(--color-button) px-5 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-button-hover)"
           >
             <ArrowLeft size={17} />
             Back to Projects
@@ -80,7 +80,7 @@ const ProjectDetails = () => {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+                  className="inline-flex items-center gap-2 rounded-xl bg-(--color-button) px-5 py-3 text-sm font-semibold text-(--color-button-text) transition hover:-translate-y-0.5 hover:bg-(--color-button-hover)"
                 >
                   <GithubIcon size={17} />
                   View on GitHub

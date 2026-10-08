@@ -38,7 +38,7 @@ const ContactCTA = () => {
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-xl bg-(--color-accent) px-6 py-3.5 text-sm font-semibold text-white shadow-(--color-accent-shadow) shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-(--color-accent-hover)"
+                className="group inline-flex items-center gap-2 rounded-xl bg-(--color-button) px-6 py-3.5 text-sm font-semibold text-(--color-button-text) shadow-(--color-accent-shadow) shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-(--color-button-hover)"
               >
                 Get In Touch
                 <ArrowRight
