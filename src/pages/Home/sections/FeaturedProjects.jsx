@@ -1,8 +1,8 @@
-import { motion } from "motion/react";
 import { ArrowRight, BriefcaseBusiness } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import ProjectCard from "../../../components/common/ProjectCard";
+import SlideUp from "../../../components/animations/SlideUp";
 import { projects } from "../../../data/projects";
 
 const FeaturedProjects = () => {
@@ -14,13 +14,7 @@ const FeaturedProjects = () => {
     <section className="px-4 py-20 sm:px-6 lg:py-28">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end"
-        >
+        <SlideUp className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-(--color-accent)">
               <BriefcaseBusiness size={18} />
@@ -48,25 +42,15 @@ const FeaturedProjects = () => {
             View all projects
             <ArrowRight size={17} />
           </Link>
-        </motion.div>
+        </SlideUp>
 
         {/* Projects */}
         {featuredProjects.length > 0 ? (
           <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                className="h-full"
-              >
+              <SlideUp key={project.id} delay={index * 0.1} className="h-full">
                 <ProjectCard project={project} />
-              </motion.div>
+              </SlideUp>
             ))}
           </div>
         ) : (
@@ -78,13 +62,7 @@ const FeaturedProjects = () => {
         )}
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl border border-(--color-border) bg-(--color-surface) p-6 sm:flex-row sm:p-8"
-        >
+        <SlideUp className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl border border-(--color-border) bg-(--color-surface) p-6 sm:flex-row sm:p-8">
           <div>
             <h3 className="font-semibold text-(--color-text-primary)">
               Want to explore more?
@@ -102,7 +80,7 @@ const FeaturedProjects = () => {
             Explore Projects
             <ArrowRight size={17} />
           </Link>
-        </motion.div>
+        </SlideUp>
       </div>
     </section>
   );

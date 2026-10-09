@@ -1,5 +1,35 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["Ahesanali", "Ahmedabad", "ecommerce", "Kadiwala"]
+  "cSpell.words": ["Ahesanali", "Ahmedabad", "ecommerce", "Kadiwala"],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#002d52",
+    "activityBar.activeBorder": "#e7e7e7",
+    "activityBar.background": "#002d52",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#bf0069",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "activityBarTop.activeBackground": "#002d52",
+    "activityBarTop.activeBorder": "#e7e7e7",
+    "activityBarTop.background": "#002d52",
+    "activityBarTop.foreground": "#e7e7e7",
+    "activityBarTop.inactiveForeground": "#e7e7e799",
+    "commandCenter.border": "#e7e7e799",
+    "commandCenter.foreground": "#e7e7e7",
+    "sash.hoverBorder": "#002d52",
+    "statusBar.background": "#00111f",
+    "statusBar.debuggingBackground": "#00111f",
+    "statusBar.debuggingForeground": "#e7e7e7",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBar.inactiveBackground": "#00111f",
+    "statusBarItem.hoverBackground": "#002d52",
+    "statusBarItem.remoteBackground": "#9f0057",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#00111f",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#00111f99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#00111f"
 }

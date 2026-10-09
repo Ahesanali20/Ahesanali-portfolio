@@ -5,9 +5,9 @@ export const education = [
     field: "Computer Applications",
     institution: "LJ University, Ahmedabad",
     period: "2024 - 2026",
-    status: "Pursuing",
+    status: "Completed",
     description:
-      "Currently pursuing MCA with a focus on software development, web technologies, programming, and modern application development.",
+      "Completed MCA with a focus on software development, web technologies, programming, and modern application development.",
     highlights: [
       "Software Development",
       "Web Development",

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowUpRight, ExternalLink } from "lucide-react/dist/cjs/lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GithubIcon } from "../ui/github";
 

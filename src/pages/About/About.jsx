@@ -6,7 +6,7 @@ import {
   Download,
   Rocket,
   Sparkles,
-} from "lucide-react/dist/cjs/lucide-react";
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import Experience from "./Experience";
 import Education from "./Education";

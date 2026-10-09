@@ -46,6 +46,7 @@
     "oxlint": "^1.81.0",
     "prettier": "^3.9.9",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "rollup-plugin-visualizer": "^7.1.1",
     "vite": "^8.3.0"
   }
 }

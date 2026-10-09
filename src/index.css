@@ -1,5 +1,59 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+/* Smooth theme transitions */
+html,
+body,
+#root,
+header,
+footer,
+main,
+section,
+article,
+nav,
+button,
+a,
+input,
+textarea,
+select {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  #root,
+  header,
+  footer,
+  main,
+  section,
+  article,
+  nav,
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    transition: none;
+  }
+}
+
 /* #f8fafc + #2563eb */
 /* :root {
   font-family: "Geist Variable", sans-serif;
@@ -520,17 +574,6 @@ a {
     var(--color-accent) 60%,
     white
   );
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  background: var(--color-background);
-  color: var(--color-text-primary);
 }
 
 button,

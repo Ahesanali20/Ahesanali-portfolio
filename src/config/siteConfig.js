@@ -17,5 +17,5 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/ahesanalikadiwala",
   },
 
-  resume: "/resume.pdf",
+  resume: "/Ahesanali_Kadiwala_Resume.pdf",
 };

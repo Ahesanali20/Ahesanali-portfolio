@@ -3,7 +3,7 @@ import {
   ArrowLeft,
   CheckCircle2,
   ExternalLink,
-} from "lucide-react/dist/cjs/lucide-react";
+} from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 
 import { projects } from "../../data/projects";

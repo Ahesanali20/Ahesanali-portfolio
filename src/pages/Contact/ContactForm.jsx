@@ -51,8 +51,22 @@ const ContactForm = () => {
       className="rounded-3xl border border-(--color-border) bg-(--color-surface) p-6 shadow-(--color-accent-shadow) shadow-lg sm:p-8"
     >
       {submitted && (
-        <div className="mb-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-600 dark:text-emerald-400">
+        <div
+          className="mb-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-600 dark:text-emerald-400"
+          role="status"
+          aria-live="polite"
+        >
           Thanks! Your message has been submitted successfully.
+        </div>
+      )}
+
+      {submitError && (
+        <div
+          role="alert"
+          aria-live="assertive"
+          className="mb-6 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-400"
+        >
+          {submitError}
         </div>
       )}
 
@@ -71,10 +85,14 @@ const ContactForm = () => {
           {...register("name")}
           placeholder="Your name"
           className="mt-2 h-12 w-full rounded-xl border border-(--color-border) bg-(--color-background) px-4 text-sm text-(--color-text-primary) transition outline-none placeholder:text-(--color-text-secondary) focus:border-(--color-accent)"
+          aria-invalid={Boolean(errors.name)}
+          aria-describedby={errors.name ? "name-error" : undefined}
         />
 
         {errors.name && (
-          <p className="mt-2 text-xs text-red-500">{errors.name.message}</p>
+          <p id="name-error" className="mt-2 text-xs text-red-500">
+            {errors.name.message}
+          </p>
         )}
       </div>
 
@@ -93,10 +111,14 @@ const ContactForm = () => {
           {...register("email")}
           placeholder="you@example.com"
           className="mt-2 h-12 w-full rounded-xl border border-(--color-border) bg-(--color-background) px-4 text-sm text-(--color-text-primary) transition outline-none placeholder:text-(--color-text-secondary) focus:border-(--color-accent)"
+          aria-invalid={Boolean(errors.email)}
+          aria-describedby={errors.email ? "email-error" : undefined}
         />
 
         {errors.email && (
-          <p className="mt-2 text-xs text-red-500">{errors.email.message}</p>
+          <p id="email-error" className="mt-2 text-xs text-red-500">
+            {errors.email.message}
+          </p>
         )}
       </div>
 
@@ -115,10 +137,14 @@ const ContactForm = () => {
           {...register("subject")}
           placeholder="How can I help?"
           className="mt-2 h-12 w-full rounded-xl border border-(--color-border) bg-(--color-background) px-4 text-sm text-(--color-text-primary) transition outline-none placeholder:text-(--color-text-secondary) focus:border-(--color-accent)"
+          aria-invalid={Boolean(errors.subject)}
+          aria-describedby={errors.subject ? "subject-error" : undefined}
         />
 
         {errors.subject && (
-          <p className="mt-2 text-xs text-red-500">{errors.subject.message}</p>
+          <p id="subject-error" className="mt-2 text-xs text-red-500">
+            {errors.subject.message}
+          </p>
         )}
       </div>
 
@@ -137,10 +163,14 @@ const ContactForm = () => {
           {...register("message")}
           placeholder="Tell me about your project..."
           className="mt-2 w-full resize-none rounded-xl border border-(--color-border) bg-(--color-background) p-4 text-sm text-(--color-text-primary) transition outline-none placeholder:text-(--color-text-secondary) focus:border-(--color-accent)"
+          aria-invalid={Boolean(errors.message)}
+          aria-describedby={errors.message ? "message-error" : undefined}
         />
 
         {errors.message && (
-          <p className="mt-2 text-xs text-red-500">{errors.message.message}</p>
+          <p id="message-error" className="mt-2 text-xs text-red-500">
+            {errors.message.message}
+          </p>
         )}
       </div>
 

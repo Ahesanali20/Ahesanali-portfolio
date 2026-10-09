@@ -7,7 +7,7 @@ The portfolio showcases my projects, technical skills, education, experience, Gi
 ## 🌐 Live Demo
 
 **Portfolio:**  
-https://ahesanali-kadiwala-portfolio.netlify.app
+https://ahesanali-portfolio.vercel.app
 
 **GitHub Repository:**  
 https://github.com/Ahesanali20/Ahesanali-portfolio

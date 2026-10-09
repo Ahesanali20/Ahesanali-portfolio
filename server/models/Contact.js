@@ -15,6 +15,11 @@ const contactSchema = new mongoose.Schema(
       required: true,
       trim: true,
       lowercase: true,
+      maxlength: 254,
+      match: [
+        /^[^\s@]+@[^\s@]+.[^\s@]+$/,
+        "Please enter a valid email address.",
+      ],
     },
 
     subject: {

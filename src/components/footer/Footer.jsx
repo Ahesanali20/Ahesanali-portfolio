@@ -1,4 +1,4 @@
-import { Mail, ArrowUp, Heart } from "lucide-react/dist/cjs/lucide-react";
+import { Mail, ArrowUp, Heart } from "lucide-react";
 import { siteConfig } from "../../config/siteConfig";
 import { LinkedinIcon } from "../ui/linkedin";
 import { GithubIcon } from "../ui/github";

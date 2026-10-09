@@ -4,7 +4,7 @@ import {
   Briefcase,
   Calendar,
   CheckCircle2,
-} from "lucide-react/dist/cjs/lucide-react";
+} from "lucide-react";
 import { experience } from "../../data/experience";
 
 const Experience = () => {

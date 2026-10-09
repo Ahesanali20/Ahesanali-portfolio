@@ -4,7 +4,7 @@ import {
   Calendar,
   CheckCircle2,
   GraduationCap,
-} from "lucide-react/dist/cjs/lucide-react";
+} from "lucide-react";
 import { education } from "../../data/education";
 
 const Education = () => {
